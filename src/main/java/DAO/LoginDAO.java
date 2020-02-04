@@ -9,7 +9,7 @@ public class LoginDAO {
     private final String SQL_USERNAME = "root";
     private final String SQL_PASSWORD = "admin";
     
-    private final String SQL_STATEMENT = "SELECT * FROM test WHERE username = ? AND password = ?";
+    private final String SQL_STATEMENT = "SELECT * FROM user WHERE username = ? AND password = ?";
     
      
     public boolean isUser(String username, String password) throws ClassNotFoundException, SQLException {
@@ -17,7 +17,6 @@ public class LoginDAO {
         Connection conection = null;
         PreparedStatement statement = null;
         ResultSet result = null;
-        boolean isUser = false;
         
         try {
             // Initialize and register the JDBC driver
@@ -36,13 +35,13 @@ public class LoginDAO {
             
             // If user on DB then return true
             if(result.next()) {
-                return isUser = true;
+                return true;
             } else { 
-                return isUser = false; 
+                return false; 
             }
         } catch(SQLException ex) {
             ex.printStackTrace(System.out);
         } 
-        return isUser; // Return true or false if user on DB 
+        return false;
     }
 }
