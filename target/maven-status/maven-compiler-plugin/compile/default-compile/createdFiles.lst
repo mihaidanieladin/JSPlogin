@@ -1,4 +1,9 @@
-DAO\LoginDAO.class
+DAO\LoginUserDAO.class
+DAO\RegisterUserDAO.class
+Interface\Conection.class
 Controler\Logout.class
+DAO\DeleteUserDAO.class
+Controler\Encrypt.class
+DAO\UpdateUserDAO.class
 Bean\User.class
 Controler\Test.class

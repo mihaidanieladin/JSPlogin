@@ -7,10 +7,11 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-public class Test extends HttpServlet{
+public class Login extends HttpServlet{
     
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
@@ -29,10 +30,13 @@ public class Test extends HttpServlet{
                 // Set user into session
                 session.setAttribute("user", username);
                 // Redirect to welcome page
-                response.sendRedirect("welcome.jsp");
+                response.sendRedirect("admin.jsp");
+                
+//                RequestDispatcher rd = request.getRequestDispatcher("AdminPanel");
+//                rd.forward(request, response);
             } else {
                 // If user not match then redirect to index page
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("login.jsp");
             }
         } catch (IOException | ClassNotFoundException | SQLException e) {
             out.print(e.getMessage());
