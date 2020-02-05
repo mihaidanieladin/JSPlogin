@@ -41,28 +41,14 @@
                         <input type="submit" value="Logout"/>
                     </form>
                 </div>
-                    
                 <div class="col col-lg-12 my-5 bg-light rounded p-2">
-                    <h1 class="header-2">Users List:</h1>
-                    </br>
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Username</th>
-                            <th scope="col">Password</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach items="${rs.rows}" var="i">
-                            <tr>
-                              <th scope="row"><c:out value="${i.id_user}"></c:out></th>
-                              <td><c:out value="${i.username}"></c:out></td>
-                              <td><c:out value="${i.password}"></c:out></td>
-                            </tr>
-                            </c:forEach>
-                        </tbody>
-                    </table>
+                    <div class="jumbotron">
+                        <h1 class="display-4">Hello, world!</h1>
+                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <hr class="my-4">
+                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                        <a class="btn btn-primary btn-lg" href="/admin" role="button">Admin users</a>
+                      </div>
                 </div>
                     
             </div>
