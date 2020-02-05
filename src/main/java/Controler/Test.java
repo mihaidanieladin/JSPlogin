@@ -1,7 +1,7 @@
 package Controler;
 
 import Bean.User;
-import DAO.LoginDAO;
+import DAO.LoginUserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ public class Test extends HttpServlet{
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         
-        LoginDAO checkIf = new LoginDAO();
+        LoginUserDAO checkIf = new LoginUserDAO();
         PrintWriter out = response.getWriter();
         
         try {
